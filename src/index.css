@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.custom-toast {
+    background-color: #dc2626; /* rojo intenso */
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.5rem;
+    min-width: 320px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.5s ease-out, fadeOut 1.2s ease-in forwards;
+  }
+  
+  /* Pikachu rebote */
+  .pika-bounce {
+    animation: bounce 1s infinite;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    80% {
+      opacity: 0.5;
+      transform: translateY(10%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20%);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
